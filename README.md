@@ -1,14 +1,14 @@
-ï»¿jså‹ç¼©é—®é¢˜è§£å†³ï¼šhttps://my.oschina.net/hyzccc/blog/1797358
+jsÑ¹ËõÎÊÌâ½â¾ö£ºhttps://my.oschina.net/hyzccc/blog/1797358
 
-æˆ‘ä»¬éœ€è¦ä»¥ä¸‹å‡ æ­¥ï¼š
+ÎÒÃÇĞèÒªÒÔÏÂ¼¸²½£º
 
-ç”¨npmå®‰è£…uglifyjs-webpack-pluginæ’ä»¶;
-å°†å…¶å¼•å…¥ï¼švar UglifyJsPlugin=require('uglifyjs-webpack-plugin');
-åˆ é™¤ä»¥å‰çš„å†™æ³•ï¼Œå°†optimizationçš„JSå‹ç¼©ä¸pluginså¹¶æ’å†™åœ¨ä¸€èµ·ï¼Œæ³¨æ„ï¼Œæ˜¯å¹¶æ’ï¼Œè€Œä¸æ˜¯åƒä»¥å‰ä¸€æ ·å†™åœ¨pluginsé‡Œé¢ã€‚
+ÓÃnpm°²×°uglifyjs-webpack-plugin²å¼ş;
+½«ÆäÒıÈë£ºvar UglifyJsPlugin=require('uglifyjs-webpack-plugin');
+É¾³ıÒÔÇ°µÄĞ´·¨£¬½«optimizationµÄJSÑ¹ËõÓëplugins²¢ÅÅĞ´ÔÚÒ»Æğ£¬×¢Òâ£¬ÊÇ²¢ÅÅ£¬¶ø²»ÊÇÏñÒÔÇ°Ò»ÑùĞ´ÔÚpluginsÀïÃæ¡£
 plugins:[
         
     ],
-     //å‹ç¼©js
+     //Ñ¹Ëõjs
     optimization: {
         minimizer: [
             new UglifyJsPlugin({
@@ -21,8 +21,8 @@ plugins:[
 
 ----------------------------------------
 
-å›¾ç‰‡ä¸æ˜¾ç¤ºé—®é¢˜ï¼šhttps://www.jb51.net/article/116445.htm
-åœ¨ rulesä¸­æ·»åŠ 
+Í¼Æ¬²»ÏÔÊ¾ÎÊÌâ£ºhttps://www.jb51.net/article/116445.htm
+ÔÚ rulesÖĞÌí¼Ó
 	    {
                 test: /\.(png|jpg)$/,
                 loader: 'url-loader?limit=8192&name=images/[hash:8].[name].[ext]',
@@ -33,8 +33,8 @@ plugins:[
 
 -------------------------------------
 
-å®‰è£…bootstrapæŠ¥é”™ï¼šhttps://www.leevii.com/2018/03/module-not-found-error-cant-resolve-popper-js-%E9%94%99%E8%AF%AF%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95.html
-1.ä¸‹è½½ popper.js
+°²×°bootstrap±¨´í£ºhttps://www.leevii.com/2018/03/module-not-found-error-cant-resolve-popper-js-%E9%94%99%E8%AF%AF%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95.html
+1.ÏÂÔØ popper.js
 	npm install popper.js -D
 2.
 	new webpack.ProvidePlugin({
@@ -47,7 +47,7 @@ plugins:[
 ----------------------------------------
 
 
-echartå®‰è£…ï¼š
+echart°²×°£º
 http://echarts.baidu.com/tutorial.html#%E5%9C%A8%20webpack%20%E4%B8%AD%E4%BD%BF%E7%94%A8%20ECharts
 
 
