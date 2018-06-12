@@ -4,25 +4,44 @@ var ExtractTextPlugin = require("extract-text-webpack-plugin");
 var autoprefixer = require('autoprefixer');
 var HtmlWebpackPlugin = require('html-webpack-plugin');
 var OpenBrowserPlugin = require('open-browser-webpack-plugin');
+
+var hostBase = "http://localhost:8081";
+
 module.exports = {
 	mode : 'development',
     devtool: 'cheap-eval-source-map',
-    entry: [
+    /* entry: [
         './src/index'
-    ],
+    ], */
+	entry:{
+		common:'./src/common/common.js',
+		index:'./src/index.js',
+		index2:'./src/index2.js',
+		test:'./src/test/test.js',
+		
+	},
     output: {
         path: path.join(__dirname, 'dev'),
-        filename: 'index.js',
-		publicPath: "http://localhost:8081/",
+        filename: '[name].js',
+		publicPath: hostBase,
 		
     },
     plugins: [
         new webpack.HotModuleReplacementPlugin(),
         new ExtractTextPlugin("styles.css"),
-        new OpenBrowserPlugin({ url: 'http://localhost:8081' }),
+        new OpenBrowserPlugin({ url: hostBase+'/index' }),
         new HtmlWebpackPlugin({
+			filename:'index',
             template: './src/index.html'
-        })
+        }),
+		new HtmlWebpackPlugin({
+			filename:'b',
+            template: './src/index2.html'
+        }),
+		new HtmlWebpackPlugin({
+			filename:'c',
+            template: './src/test/test.html'
+        }),
     ],
     module: {
 		
@@ -74,7 +93,7 @@ module.exports = {
         ]
     },
     devServer: {
-        contentBase: './dev',
+        contentBase: './dev/',
         hot: true,
         host: '127.0.0.1',
         port: '8081'
